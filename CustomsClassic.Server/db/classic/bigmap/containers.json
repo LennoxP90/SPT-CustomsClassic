@@ -1,0 +1,612 @@
+[
+ {
+  "Id": "Lootable_00006",
+  "Template": "578f87a3245977356274f2cb",
+  "Scene": "bigmap_multiScene"
+ },
+ {
+  "Id": "Lootable_00005",
+  "Template": "578f87ad245977356274f2cc",
+  "Scene": "bigmap_multiScene"
+ },
+ {
+  "Id": "Lootable_00004",
+  "Template": "578f87ad245977356274f2cc",
+  "Scene": "bigmap_multiScene"
+ },
+ {
+  "Id": "Lootable_00002",
+  "Template": "578f8778245977358849a9b5",
+  "Scene": "bigmap_multiScene"
+ },
+ {
+  "Id": "Lootable_00003",
+  "Template": "578f87ad245977356274f2cc",
+  "Scene": "bigmap_multiScene"
+ },
+ {
+  "Id": "Lootable_00001",
+  "Template": "578f879c24597735401e6bc6",
+  "Scene": "bigmap_multiScene"
+ },
+ {
+  "Id": "Lootable_00010",
+  "Template": "578f8782245977354405a1e3",
+  "Scene": "custom_AZS"
+ },
+ {
+  "Id": "Lootable_00011",
+  "Template": "578f879c24597735401e6bc6",
+  "Scene": "custom_AZS"
+ },
+ {
+  "Id": "Lootable_00014",
+  "Template": "578f879c24597735401e6bc6",
+  "Scene": "custom_AZS"
+ },
+ {
+  "Id": "Lootable_00013",
+  "Template": "578f87ad245977356274f2cc",
+  "Scene": "custom_AZS"
+ },
+ {
+  "Id": "Lootable_00009",
+  "Template": "578f879c24597735401e6bc6",
+  "Scene": "custom_AZS"
+ },
+ {
+  "Id": "Lootable_00012",
+  "Template": "578f87a3245977356274f2cb",
+  "Scene": "custom_AZS"
+ },
+ {
+  "Id": "Lootable_00014",
+  "Template": "578f879c24597735401e6bc6",
+  "Scene": "custom_AZS"
+ },
+ {
+  "Id": "Lootable_00000",
+  "Template": "578f87ad245977356274f2cc",
+  "Scene": "custom_AZS_old"
+ },
+ {
+  "Id": "Lootable_00120",
+  "Template": "578f87ad245977356274f2cc",
+  "Scene": "custom_Garage"
+ },
+ {
+  "Id": "Lootable_00119",
+  "Template": "578f87a3245977356274f2cb",
+  "Scene": "custom_Garage"
+ },
+ {
+  "Id": "Lootable_00118",
+  "Template": "578f87ad245977356274f2cc",
+  "Scene": "custom_Garage"
+ },
+ {
+  "Id": "Lootable_00089",
+  "Template": "578f87a3245977356274f2cb",
+  "Scene": "custom_Obshezhitie"
+ },
+ {
+  "Id": "Lootable_00088",
+  "Template": "578f879c24597735401e6bc6",
+  "Scene": "custom_Obshezhitie"
+ },
+ {
+  "Id": "Lootable_00082",
+  "Template": "578f87b7245977356274f2cd",
+  "Scene": "custom_Obshezhitie_1_indoor"
+ },
+ {
+  "Id": "Lootable_00070",
+  "Template": "578f87b7245977356274f2cd",
+  "Scene": "custom_Obshezhitie_1_indoor"
+ },
+ {
+  "Id": "Lootable_00054",
+  "Template": "578f87b7245977356274f2cd",
+  "Scene": "custom_Obshezhitie_1_indoor"
+ },
+ {
+  "Id": "Lootable_00087",
+  "Template": "578f8778245977358849a9b5",
+  "Scene": "custom_Obshezhitie_1_indoor"
+ },
+ {
+  "Id": "Lootable_00060",
+  "Template": "578f8778245977358849a9b5",
+  "Scene": "custom_Obshezhitie_1_indoor"
+ },
+ {
+  "Id": "Lootable_00055",
+  "Template": "578f87b7245977356274f2cd",
+  "Scene": "custom_Obshezhitie_1_indoor"
+ },
+ {
+  "Id": "Lootable_00083",
+  "Template": "578f87b7245977356274f2cd",
+  "Scene": "custom_Obshezhitie_1_indoor"
+ },
+ {
+  "Id": "Lootable_00074",
+  "Template": "578f87b7245977356274f2cd",
+  "Scene": "custom_Obshezhitie_1_indoor"
+ },
+ {
+  "Id": "Lootable_00059",
+  "Template": "578f8778245977358849a9b5",
+  "Scene": "custom_Obshezhitie_1_indoor"
+ },
+ {
+  "Id": "Lootable_00058",
+  "Template": "578f8782245977354405a1e3",
+  "Scene": "custom_Obshezhitie_1_indoor"
+ },
+ {
+  "Id": "Lootable_00053",
+  "Template": "578f87b7245977356274f2cd",
+  "Scene": "custom_Obshezhitie_1_indoor"
+ },
+ {
+  "Id": "Lootable_00057",
+  "Template": "578f8782245977354405a1e3",
+  "Scene": "custom_Obshezhitie_1_indoor"
+ },
+ {
+  "Id": "Lootable_00068",
+  "Template": "578f87b7245977356274f2cd",
+  "Scene": "custom_Obshezhitie_1_indoor"
+ },
+ {
+  "Id": "Lootable_00077",
+  "Template": "578f87b7245977356274f2cd",
+  "Scene": "custom_Obshezhitie_1_indoor"
+ },
+ {
+  "Id": "Lootable_00056",
+  "Template": "578f87b7245977356274f2cd",
+  "Scene": "custom_Obshezhitie_1_indoor"
+ },
+ {
+  "Id": "Lootable_00084",
+  "Template": "578f87b7245977356274f2cd",
+  "Scene": "custom_Obshezhitie_1_indoor"
+ },
+ {
+  "Id": "Lootable_00061",
+  "Template": "578f87ad245977356274f2cc",
+  "Scene": "custom_Obshezhitie_1_indoor"
+ },
+ {
+  "Id": "Lootable_00069",
+  "Template": "578f87b7245977356274f2cd",
+  "Scene": "custom_Obshezhitie_1_indoor"
+ },
+ {
+  "Id": "Lootable_00078",
+  "Template": "578f8778245977358849a9b5",
+  "Scene": "custom_Obshezhitie_1_indoor"
+ },
+ {
+  "Id": "Lootable_00071",
+  "Template": "578f87b7245977356274f2cd",
+  "Scene": "custom_Obshezhitie_1_indoor"
+ },
+ {
+  "Id": "Lootable_00064",
+  "Template": "578f8778245977358849a9b5",
+  "Scene": "custom_Obshezhitie_1_indoor"
+ },
+ {
+  "Id": "Lootable_00079",
+  "Template": "578f87a3245977356274f2cb",
+  "Scene": "custom_Obshezhitie_1_indoor"
+ },
+ {
+  "Id": "Lootable_00066",
+  "Template": "578f87b7245977356274f2cd",
+  "Scene": "custom_Obshezhitie_1_indoor"
+ },
+ {
+  "Id": "Lootable_00063",
+  "Template": "578f8778245977358849a9b5",
+  "Scene": "custom_Obshezhitie_1_indoor"
+ },
+ {
+  "Id": "Lootable_00065",
+  "Template": "578f87b7245977356274f2cd",
+  "Scene": "custom_Obshezhitie_1_indoor"
+ },
+ {
+  "Id": "Lootable_00076",
+  "Template": "578f87b7245977356274f2cd",
+  "Scene": "custom_Obshezhitie_1_indoor"
+ },
+ {
+  "Id": "Lootable_00085",
+  "Template": "578f87b7245977356274f2cd",
+  "Scene": "custom_Obshezhitie_1_indoor"
+ },
+ {
+  "Id": "Lootable_00075",
+  "Template": "578f87b7245977356274f2cd",
+  "Scene": "custom_Obshezhitie_1_indoor"
+ },
+ {
+  "Id": "Lootable_00073",
+  "Template": "578f8782245977354405a1e3",
+  "Scene": "custom_Obshezhitie_1_indoor"
+ },
+ {
+  "Id": "Lootable_00081",
+  "Template": "578f8778245977358849a9b5",
+  "Scene": "custom_Obshezhitie_1_indoor"
+ },
+ {
+  "Id": "Lootable_00062",
+  "Template": "578f87a3245977356274f2cb",
+  "Scene": "custom_Obshezhitie_1_indoor"
+ },
+ {
+  "Id": "Lootable_00067",
+  "Template": "578f87b7245977356274f2cd",
+  "Scene": "custom_Obshezhitie_1_indoor"
+ },
+ {
+  "Id": "Lootable_00080",
+  "Template": "578f8778245977358849a9b5",
+  "Scene": "custom_Obshezhitie_1_indoor"
+ },
+ {
+  "Id": "Lootable_00086",
+  "Template": "578f87ad245977356274f2cc",
+  "Scene": "custom_Obshezhitie_1_indoor"
+ },
+ {
+  "Id": "Lootable_00072",
+  "Template": "578f87b7245977356274f2cd",
+  "Scene": "custom_Obshezhitie_1_indoor"
+ },
+ {
+  "Id": "Lootable_00023",
+  "Template": "578f8778245977358849a9b5",
+  "Scene": "custom_Obshezhitie_2_indoor"
+ },
+ {
+  "Id": "Lootable_00028",
+  "Template": "578f8778245977358849a9b5",
+  "Scene": "custom_Obshezhitie_2_indoor"
+ },
+ {
+  "Id": "Lootable_00046",
+  "Template": "578f8778245977358849a9b5",
+  "Scene": "custom_Obshezhitie_2_indoor"
+ },
+ {
+  "Id": "Lootable_00015",
+  "Template": "578f87a3245977356274f2cb",
+  "Scene": "custom_Obshezhitie_2_indoor"
+ },
+ {
+  "Id": "Lootable_00031",
+  "Template": "578f87b7245977356274f2cd",
+  "Scene": "custom_Obshezhitie_2_indoor"
+ },
+ {
+  "Id": "Lootable_00036",
+  "Template": "578f87b7245977356274f2cd",
+  "Scene": "custom_Obshezhitie_2_indoor"
+ },
+ {
+  "Id": "Lootable_00016",
+  "Template": "578f8778245977358849a9b5",
+  "Scene": "custom_Obshezhitie_2_indoor"
+ },
+ {
+  "Id": "Lootable_00045",
+  "Template": "578f87ad245977356274f2cc",
+  "Scene": "custom_Obshezhitie_2_indoor"
+ },
+ {
+  "Id": "Lootable_00033",
+  "Template": "578f87b7245977356274f2cd",
+  "Scene": "custom_Obshezhitie_2_indoor"
+ },
+ {
+  "Id": "Lootable_00024",
+  "Template": "578f87b7245977356274f2cd",
+  "Scene": "custom_Obshezhitie_2_indoor"
+ },
+ {
+  "Id": "Lootable_00017",
+  "Template": "578f8778245977358849a9b5",
+  "Scene": "custom_Obshezhitie_2_indoor"
+ },
+ {
+  "Id": "Lootable_00039",
+  "Template": "578f8778245977358849a9b5",
+  "Scene": "custom_Obshezhitie_2_indoor"
+ },
+ {
+  "Id": "Lootable_00042",
+  "Template": "578f87b7245977356274f2cd",
+  "Scene": "custom_Obshezhitie_2_indoor"
+ },
+ {
+  "Id": "Lootable_00043",
+  "Template": "578f87b7245977356274f2cd",
+  "Scene": "custom_Obshezhitie_2_indoor"
+ },
+ {
+  "Id": "Lootable_00052",
+  "Template": "578f87ad245977356274f2cc",
+  "Scene": "custom_Obshezhitie_2_indoor"
+ },
+ {
+  "Id": "Lootable_00035",
+  "Template": "578f87b7245977356274f2cd",
+  "Scene": "custom_Obshezhitie_2_indoor"
+ },
+ {
+  "Id": "Lootable_00034",
+  "Template": "578f87b7245977356274f2cd",
+  "Scene": "custom_Obshezhitie_2_indoor"
+ },
+ {
+  "Id": "Lootable_00018",
+  "Template": "578f8778245977358849a9b5",
+  "Scene": "custom_Obshezhitie_2_indoor"
+ },
+ {
+  "Id": "Lootable_00020",
+  "Template": "578f8778245977358849a9b5",
+  "Scene": "custom_Obshezhitie_2_indoor"
+ },
+ {
+  "Id": "Lootable_00051",
+  "Template": "578f87a3245977356274f2cb",
+  "Scene": "custom_Obshezhitie_2_indoor"
+ },
+ {
+  "Id": "Lootable_00050",
+  "Template": "578f8778245977358849a9b5",
+  "Scene": "custom_Obshezhitie_2_indoor"
+ },
+ {
+  "Id": "Lootable_00022",
+  "Template": "578f8778245977358849a9b5",
+  "Scene": "custom_Obshezhitie_2_indoor"
+ },
+ {
+  "Id": "Lootable_00030",
+  "Template": "578f87b7245977356274f2cd",
+  "Scene": "custom_Obshezhitie_2_indoor"
+ },
+ {
+  "Id": "Lootable_00019",
+  "Template": "578f87ad245977356274f2cc",
+  "Scene": "custom_Obshezhitie_2_indoor"
+ },
+ {
+  "Id": "Lootable_00021",
+  "Template": "578f8778245977358849a9b5",
+  "Scene": "custom_Obshezhitie_2_indoor"
+ },
+ {
+  "Id": "Lootable_00044",
+  "Template": "578f8778245977358849a9b5",
+  "Scene": "custom_Obshezhitie_2_indoor"
+ },
+ {
+  "Id": "Lootable_00049",
+  "Template": "578f8778245977358849a9b5",
+  "Scene": "custom_Obshezhitie_2_indoor"
+ },
+ {
+  "Id": "Lootable_00048",
+  "Template": "578f8778245977358849a9b5",
+  "Scene": "custom_Obshezhitie_2_indoor"
+ },
+ {
+  "Id": "Lootable_00040",
+  "Template": "578f87b7245977356274f2cd",
+  "Scene": "custom_Obshezhitie_2_indoor"
+ },
+ {
+  "Id": "Lootable_00027",
+  "Template": "578f87b7245977356274f2cd",
+  "Scene": "custom_Obshezhitie_2_indoor"
+ },
+ {
+  "Id": "Lootable_00041",
+  "Template": "578f87b7245977356274f2cd",
+  "Scene": "custom_Obshezhitie_2_indoor"
+ },
+ {
+  "Id": "Lootable_00029",
+  "Template": "578f87b7245977356274f2cd",
+  "Scene": "custom_Obshezhitie_2_indoor"
+ },
+ {
+  "Id": "Lootable_00032",
+  "Template": "578f87b7245977356274f2cd",
+  "Scene": "custom_Obshezhitie_2_indoor"
+ },
+ {
+  "Id": "Lootable_00047",
+  "Template": "578f87a3245977356274f2cb",
+  "Scene": "custom_Obshezhitie_2_indoor"
+ },
+ {
+  "Id": "Lootable_00037",
+  "Template": "578f8778245977358849a9b5",
+  "Scene": "custom_Obshezhitie_2_indoor"
+ },
+ {
+  "Id": "Lootable_00026",
+  "Template": "578f87b7245977356274f2cd",
+  "Scene": "custom_Obshezhitie_2_indoor"
+ },
+ {
+  "Id": "Lootable_00025",
+  "Template": "578f87b7245977356274f2cd",
+  "Scene": "custom_Obshezhitie_2_indoor"
+ },
+ {
+  "Id": "Lootable_00038",
+  "Template": "578f8778245977358849a9b5",
+  "Scene": "custom_Obshezhitie_2_indoor"
+ },
+ {
+  "Id": "Lootable_00108",
+  "Template": "578f87b7245977356274f2cd",
+  "Scene": "custom_Tamozhnya"
+ },
+ {
+  "Id": "Lootable_00109",
+  "Template": "578f87b7245977356274f2cd",
+  "Scene": "custom_Tamozhnya"
+ },
+ {
+  "Id": "Lootable_00103",
+  "Template": "578f87ad245977356274f2cc",
+  "Scene": "custom_Tamozhnya"
+ },
+ {
+  "Id": "Lootable_00113",
+  "Template": "578f87b7245977356274f2cd",
+  "Scene": "custom_Tamozhnya"
+ },
+ {
+  "Id": "Lootable_00115",
+  "Template": "578f87b7245977356274f2cd",
+  "Scene": "custom_Tamozhnya"
+ },
+ {
+  "Id": "Lootable_00105",
+  "Template": "578f87ad245977356274f2cc",
+  "Scene": "custom_Tamozhnya"
+ },
+ {
+  "Id": "Lootable_00111",
+  "Template": "578f87b7245977356274f2cd",
+  "Scene": "custom_Tamozhnya"
+ },
+ {
+  "Id": "Lootable_00106",
+  "Template": "578f8778245977358849a9b5",
+  "Scene": "custom_Tamozhnya"
+ },
+ {
+  "Id": "Lootable_00114",
+  "Template": "578f87b7245977356274f2cd",
+  "Scene": "custom_Tamozhnya"
+ },
+ {
+  "Id": "Lootable_00107",
+  "Template": "578f87a3245977356274f2cb",
+  "Scene": "custom_Tamozhnya"
+ },
+ {
+  "Id": "Lootable_00102",
+  "Template": "578f8778245977358849a9b5",
+  "Scene": "custom_Tamozhnya"
+ },
+ {
+  "Id": "Lootable_00112",
+  "Template": "578f87b7245977356274f2cd",
+  "Scene": "custom_Tamozhnya"
+ },
+ {
+  "Id": "Lootable_00110",
+  "Template": "578f87b7245977356274f2cd",
+  "Scene": "custom_Tamozhnya"
+ },
+ {
+  "Id": "Lootable_00100",
+  "Template": "578f8778245977358849a9b5",
+  "Scene": "custom_Tamozhnya"
+ },
+ {
+  "Id": "Lootable_00101",
+  "Template": "578f87a3245977356274f2cb",
+  "Scene": "custom_Tamozhnya"
+ },
+ {
+  "Id": "Lootable_00117",
+  "Template": "578f87a3245977356274f2cb",
+  "Scene": "custom_Tamozhnya"
+ },
+ {
+  "Id": "Lootable_00116",
+  "Template": "578f8782245977354405a1e3",
+  "Scene": "custom_Tamozhnya"
+ },
+ {
+  "Id": "Lootable_00104",
+  "Template": "578f8778245977358849a9b5",
+  "Scene": "custom_Tamozhnya"
+ },
+ {
+  "Id": "Lootable_00097",
+  "Template": "578f8778245977358849a9b5",
+  "Scene": "custom_TrailerPark"
+ },
+ {
+  "Id": "Lootable_00098",
+  "Template": "578f8778245977358849a9b5",
+  "Scene": "custom_TrailerPark"
+ },
+ {
+  "Id": "Lootable_00099",
+  "Template": "578f8778245977358849a9b5",
+  "Scene": "custom_TrailerPark"
+ },
+ {
+  "Id": "Lootable_00095",
+  "Template": "578f87b7245977356274f2cd",
+  "Scene": "custom_factoryStorageZone"
+ },
+ {
+  "Id": "Lootable_00092",
+  "Template": "578f87b7245977356274f2cd",
+  "Scene": "custom_factoryStorageZone"
+ },
+ {
+  "Id": "Lootable_00090",
+  "Template": "578f87ad245977356274f2cc",
+  "Scene": "custom_factoryStorageZone"
+ },
+ {
+  "Id": "Lootable_00096",
+  "Template": "578f87ad245977356274f2cc",
+  "Scene": "custom_factoryStorageZone"
+ },
+ {
+  "Id": "Lootable_00093",
+  "Template": "578f87b7245977356274f2cd",
+  "Scene": "custom_factoryStorageZone"
+ },
+ {
+  "Id": "Lootable_00094",
+  "Template": "578f87b7245977356274f2cd",
+  "Scene": "custom_factoryStorageZone"
+ },
+ {
+  "Id": "Lootable_00091",
+  "Template": "578f8778245977358849a9b5",
+  "Scene": "custom_factoryStorageZone"
+ },
+ {
+  "Id": "Lootable_00007",
+  "Template": "578f8778245977358849a9b5",
+  "Scene": "custom_mazuto"
+ },
+ {
+  "Id": "Lootable_00008",
+  "Template": "578f87ad245977356274f2cc",
+  "Scene": "custom_mazuto"
+ }
+]
