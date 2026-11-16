@@ -1,0 +1,10 @@
+bin/
+obj/
+*.user
+.vs/
+dist/
+staging/
+*.7z
+
+# Generated map data, shipped in the release archive
+CustomsClassic.Client/plugin-data/ai/
