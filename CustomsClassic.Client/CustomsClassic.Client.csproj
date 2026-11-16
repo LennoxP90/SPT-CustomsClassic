@@ -1,0 +1,64 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+    <AssemblyName>CustomsClassic.Client</AssemblyName>
+    <RootNamespace>CustomsClassic.Client</RootNamespace>
+    <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+    <Version>$(ModVersion)</Version>
+    <AssemblyVersion>$(ModVersion).0</AssemblyVersion>
+    <FileVersion>$(AssemblyVersion)</FileVersion>
+    <!-- The built map bundle lives outside git; staging copies it when present. -->
+    <BundleDir Condition="'$(BundleDir)' == ''">F:\Code\SPT docker server\sdk\staging\customsclassic-out\borrowed</BundleDir>
+    <NavMeshDir Condition="'$(NavMeshDir)' == ''">F:\Code\SPT docker server\sdk\staging\customsclassic-out\navmesh</NavMeshDir>
+  </PropertyGroup>
+
+  <Target Name="CheckEftRefs" BeforeTargets="ResolveAssemblyReferences">
+    <Error Condition="!Exists('$(SptManaged)\Assembly-CSharp.dll')" Text="EFT assemblies not found at $(SptManaged). Pass /p:SptRoot=&lt;install&gt;." />
+  </Target>
+
+  <ItemGroup>
+    <Compile Include="..\CustomsClassic.Shared\*.cs" Link="Shared\%(Filename)%(Extension)" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="BepInEx"><HintPath>$(SptBepInEx)\core\BepInEx.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="0Harmony"><HintPath>$(SptBepInEx)\core\0Harmony.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Assembly-CSharp"><HintPath>$(SptManaged)\Assembly-CSharp.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Comfort"><HintPath>$(SptManaged)\Comfort.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Comfort.Unity"><HintPath>$(SptManaged)\Comfort.Unity.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Newtonsoft.Json"><HintPath>$(SptManaged)\Newtonsoft.Json.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine"><HintPath>$(SptManaged)\UnityEngine.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.CoreModule"><HintPath>$(SptManaged)\UnityEngine.CoreModule.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.PhysicsModule"><HintPath>$(SptManaged)\UnityEngine.PhysicsModule.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.AssetBundleModule"><HintPath>$(SptManaged)\UnityEngine.AssetBundleModule.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.TerrainModule"><HintPath>$(SptManaged)\UnityEngine.TerrainModule.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.AIModule"><HintPath>$(SptManaged)\UnityEngine.AIModule.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.AudioModule"><HintPath>$(SptManaged)\UnityEngine.AudioModule.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="spt-common"><HintPath>$(SptBepInEx)\plugins\spt\spt-common.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="spt-reflection"><HintPath>$(SptBepInEx)\plugins\spt\spt-reflection.dll</HintPath><Private>false</Private></Reference>
+  </ItemGroup>
+
+  <Target Name="GenerateBuildInfo" BeforeTargets="CoreCompile">
+    <PropertyGroup><BuildInfoFile>$(IntermediateOutputPath)BuildInfo.g.cs</BuildInfoFile></PropertyGroup>
+    <ItemGroup>
+      <_BuildInfoLines Include="namespace $(RootNamespace) { internal static class BuildInfo { public const string Version = %22$(ModVersion)%22%3B public const string Guid = %22$(ModGuid)%22%3B public const string Folder = %22$(PluginFolder)%22%3B } }" />
+    </ItemGroup>
+    <WriteLinesToFile File="$(BuildInfoFile)" Lines="@(_BuildInfoLines)" Overwrite="true" WriteOnlyWhenDifferent="true" />
+    <ItemGroup><Compile Include="$(BuildInfoFile)" /></ItemGroup>
+  </Target>
+
+  <Target Name="StageClient" AfterTargets="Build">
+    <PropertyGroup><StageDir>$(DistRoot)BepInEx\plugins\$(PluginFolder)\</StageDir></PropertyGroup>
+    <ItemGroup>
+      <PluginData Include="$(ProjectDir)plugin-data\**\*.*" />
+      <MapBundle Include="$(BundleDir)\customsclassic_map.bundle;$(BundleDir)\customsclassic_map-stamp.json" Condition="Exists('$(BundleDir)\customsclassic_map.bundle')" />
+      <MapBundle Include="$(NavMeshDir)\customsclassic_navmesh.bundle;$(NavMeshDir)\customsclassic_navmesh-stamp.json" Condition="Exists('$(NavMeshDir)\customsclassic_navmesh.bundle')" />
+    </ItemGroup>
+    <MakeDir Directories="$(StageDir)" />
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(StageDir)" />
+    <Copy SourceFiles="@(PluginData)" DestinationFiles="@(PluginData->'$(StageDir)plugin-data\%(RecursiveDir)%(Filename)%(Extension)')" />
+    <Copy SourceFiles="@(MapBundle)" DestinationFolder="$(StageDir)plugin-data\map" SkipUnchangedFiles="true" />
+    <Warning Condition="!Exists('$(BundleDir)\customsclassic_map.bundle')" Text="No map bundle at $(BundleDir); staged without it." />
+    <Message Importance="high" Text="staged client to $(StageDir)" />
+  </Target>
+</Project>
