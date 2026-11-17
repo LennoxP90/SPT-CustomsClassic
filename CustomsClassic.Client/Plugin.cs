@@ -23,9 +23,12 @@ namespace CustomsClassic.Client
             PluginDir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
 
             Safe(nameof(PresetSwapPatch), () => new PresetSwapPatch().Enable());
+            Safe(nameof(ClassicWater), ClassicWater.Install);
             Safe(nameof(ClassicRebind), ClassicRebind.Install);
+            Safe(nameof(ClassicSounds), ClassicSounds.Install);
             Safe(nameof(ClassicRegistry), ClassicRegistry.Install);
             Safe(nameof(ClassicExitsMover), ClassicExitsMover.Install);
+            Safe(nameof(ClassicLeftovers), ClassicLeftovers.Install);
             Safe(nameof(ClassicNavMeshPatch), () => new ClassicNavMeshPatch().Enable());
             Safe(nameof(WaypointsStandDownPatch), () => { if (WaypointsStandDownPatch.Injector() != null) new WaypointsStandDownPatch().Enable(); });
             Safe("MapVariants", RegisterWithMapVariants);
