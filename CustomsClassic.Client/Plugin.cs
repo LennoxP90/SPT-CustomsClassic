@@ -30,6 +30,7 @@ namespace CustomsClassic.Client
             Safe(nameof(ClassicExitsMover), ClassicExitsMover.Install);
             Safe(nameof(ClassicLeftovers), ClassicLeftovers.Install);
             Safe(nameof(ClassicNavMeshPatch), () => new ClassicNavMeshPatch().Enable());
+            Safe(nameof(ClassicCoversPatch), () => new ClassicCoversPatch().Enable());
             Safe(nameof(WaypointsStandDownPatch), () => { if (WaypointsStandDownPatch.Injector() != null) new WaypointsStandDownPatch().Enable(); });
             Safe("MapVariants", RegisterWithMapVariants);
 
