@@ -1,0 +1,5 @@
+{
+  "bossBully": { "chance": 0, "zones": ["ZoneDormitory", "ZoneGasStation"] },
+  "bossKnight": { "chance": 0, "zones": ["ZoneCustoms"] },
+  "sectantPriest": { "chance": 0, "zones": ["*"] }
+}
