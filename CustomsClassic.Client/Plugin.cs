@@ -30,6 +30,7 @@ namespace CustomsClassic.Client
             Safe(nameof(ClassicExitsMover), ClassicExitsMover.Install);
             Safe(nameof(ClassicLeftovers), ClassicLeftovers.Install);
             Safe(nameof(ClassicFloors), ClassicFloors.Install);
+            Safe(nameof(ClassicFloorGuard), ClassicFloorGuard.Install);
             Safe(nameof(ClassicNavMeshPatch), () => new ClassicNavMeshPatch().Enable());
             Safe(nameof(ClassicCoversPatch), () => new ClassicCoversPatch().Enable());
             Safe(nameof(ClassicBossZonePatch), () => new ClassicBossZonePatch().Enable());
