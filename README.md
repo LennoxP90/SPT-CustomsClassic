@@ -17,7 +17,8 @@ airdrops, exits and sound systems stay loaded underneath, moved to where the cla
 - **The classic layout** with its own player spawns, exits, loot containers and loose loot positions.
 - **Bots that work on it.** The navmesh, cover points and patrol routes are the classic map's own, and bot spawn
   points with no classic ground under them are switched off.
-- **Bosses by rule.** Which bosses can appear on the classic tile, and where, is set in a config file (below).
+- **No bosses unless you want them.** Classic Customs ships with Reshala, the Goons and the cultists at a 0% chance.
+  A config file turns them on, and says where each may appear (below).
 - **The bundle borrows from your install.** Most textures the classic map shares with the game are read from your
   own SPT 4.1 client rather than shipped, which keeps the download down.
 
@@ -36,8 +37,25 @@ there. Restart the server.
 
 ## Configuration
 
-Server side, in `user/mods/LennoxP90-CustomsClassic/config/bosses.json`: the boss rules for the classic tile. It is
-read once at load, so a change needs a server restart. It does not touch the Customs SPT ships.
+Server side, in `user/mods/LennoxP90-CustomsClassic/config/bosses.json`:
+
+```json
+{
+  "bossBully": { "chance": 0, "zones": ["ZoneDormitory", "ZoneGasStation"] },
+  "bossKnight": { "chance": 0, "zones": ["ZoneCustoms"] },
+  "sectantPriest": { "chance": 0, "zones": ["*"] }
+}
+```
+
+Change a `chance` to the percent you want per raid and save. The next raid uses it; no restart is needed. For
+reference, modern Customs uses 39 for Reshala and 20 for the Goons and the cultists.
+
+- A boss never starts in the area you spawn in, and two bosses never share an area. A boss with no area left sits
+  the raid out.
+- Cultists only appear in raids that start between 22:00 and 06:00.
+- `zones` takes the game's bot zone names, or `"*"` for every area that has bot spawns on Classic.
+- The file only affects Classic Customs. Modern Customs keeps the game's own boss settings, and a bot spawn mod
+  keeps its PMCs, scavs and every other map.
 
 ## Known limits
 
