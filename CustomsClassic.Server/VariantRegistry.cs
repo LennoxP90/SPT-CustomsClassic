@@ -10,8 +10,10 @@ using SPTarkov.Server.Core.Utils;
 namespace CustomsClassic.Server;
 
 /// <summary>
-/// Builds classic Customs beside the shipped one and hands the pair to MapVariants. Runs at PostLoad: after other
-/// mods' edits to the shipped location, before MapVariants' discovery pass, which skips a registered location.
+/// Builds classic Customs beside the shipped one and hands it to MapVariants. Runs at PostLoad: after other mods'
+/// edits to the shipped location, before MapVariants' discovery pass. With MapVariants 1.2.0 and up Classic is one
+/// source among several, so another mod's Customs (a backport such as FumsCustoms) is offered beside it; before
+/// that the pair is registered and Classic owns the map alone.
 /// </summary>
 [Injectable(InjectionType.Singleton, TypePriority = OnLoadOrder.PostLoad), UsedImplicitly]
 public class VariantRegistry(
@@ -25,8 +27,12 @@ public class VariantRegistry(
     public Task OnLoadAsync(CancellationToken cancellationToken)
     {
         var id = CustomsScenes.LocationId;
-        var vanilla = locationTable.GetLocation(id);
-        if (vanilla is null) { logger.Error($"[CC] no location '{id}'; Classic Customs is not available"); return Task.CompletedTask; }
+        var live = locationTable.GetLocation(id);
+        if (live is null) { logger.Error($"[CC] no location '{id}'; Classic Customs is not available"); return Task.CompletedTask; }
+
+        // Built from the shipped map, never from whatever another mod has already put on the live location.
+        var sources = mapVariants.HasSources;
+        var vanilla = (sources ? mapVariants.Shipped(id) : null) ?? live;
 
         try
         {
@@ -44,8 +50,15 @@ public class VariantRegistry(
             summary += "; bosses: " + bosses.Apply();
             logger.Info($"[CC] {id} classic dataset built: {summary}");
 
+            if (sources)
+            {
+                if (mapVariants.RegisterSource(id, VariantVocabulary.MapVariantsClassic, classic))
+                    logger.Info($"[CC] {id} handed to MapVariants as source '{VariantVocabulary.MapVariantsClassic}'; it owns the choice, the routes and the swap from here");
+                else
+                    logger.Error($"[CC] {id} could NOT be handed to MapVariants; it stays vanilla only");
+            }
             // The LIVE location goes over as original: MapVariants captures both field sets before installing anything.
-            if (mapVariants.Register(id, vanilla, classic))
+            else if (mapVariants.Register(id, vanilla, classic))
                 logger.Info($"[CC] {id} handed to MapVariants; it owns the choice, the routes and the swap from here");
             else
                 logger.Error($"[CC] {id} could NOT be handed to MapVariants; it stays vanilla only");

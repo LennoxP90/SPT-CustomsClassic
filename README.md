@@ -28,6 +28,9 @@ airdrops, exits and sound systems stay loaded underneath, moved to where the cla
 - **MapVariants 1.1.0 or later** (`com.lennoxp90.mapvariants`), required, not optional. It owns the map-screen
   choice for every map that has a second version, this one included. Without it neither half of this mod loads and
   Customs is the map SPT ships.
+  With **MapVariants 1.2.0 or later**, Classic is offered beside any other mod's Customs: with a Customs backport
+  installed too, the map screen offers Vanilla, that backport, and Classic. With 1.1.0, Classic must be the only
+  mod offering Customs.
 - Fika is optional. The variant choice travels with the raid the same way it does for FactoryClassic.
 
 ## Install

@@ -25,11 +25,17 @@ namespace CustomsClassic.Shared
         public const string MapVariantsBackport = "backport";
         public const string MapVariantsUnmanaged = "unmanaged";
 
+        // Classic's own id when MapVariants (1.2.0 and up) holds it as one source among several. The client callback
+        // still hears "backport" for Classic and "original" for anything else; only the server's InstalledVariant and
+        // Maps.CurrentVariant name it.
+        public const string MapVariantsClassic = "classic";
+
         public static bool IsUnmanaged(string? variant)
             => string.Equals((variant ?? "").Trim(), MapVariantsUnmanaged, StringComparison.OrdinalIgnoreCase);
 
         public static string FromMapVariants(string? variant)
             => string.Equals((variant ?? "").Trim(), MapVariantsBackport, StringComparison.OrdinalIgnoreCase)
+               || string.Equals((variant ?? "").Trim(), MapVariantsClassic, StringComparison.OrdinalIgnoreCase)
                 ? MapVariant.Classic
                 : MapVariant.Original;
 
