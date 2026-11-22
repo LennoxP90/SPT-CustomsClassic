@@ -42,11 +42,16 @@ namespace CustomsClassic.Client
             Log.LogInfo($"[CC] CustomsClassic {BuildInfo.Version} loaded; MapVariants owns the choice");
         }
 
-        // Short names alone: MapVariants composes "Customs - Classic" itself.
+        // Short names alone: MapVariants composes "Customs - Classic" itself. With MapVariants 1.2.0 and up Classic joins
+        // as a source, beside any other mod's Customs; the server half does the same, so both use the same id.
         static void RegisterWithMapVariants()
         {
-            var ok = MapVariantsApi.Register(new[] { CustomsScenes.LocationId }, "Customs", "Classic", "Vanilla",
-                TilePath("customs_classic.png"), TilePath("customs_vanilla.png"), PresetSwap.OnMapVariantsAnswer, Warnings);
+            var ids = new[] { CustomsScenes.LocationId };
+            var ok = MapVariantsApi.HasSources
+                ? MapVariantsApi.RegisterSource(ids, "Customs", VariantVocabulary.MapVariantsClassic, "Classic", "Vanilla",
+                    TilePath("customs_classic.png"), TilePath("customs_vanilla.png"), PresetSwap.OnMapVariantsAnswer, Warnings)
+                : MapVariantsApi.Register(ids, "Customs", "Classic", "Vanilla",
+                    TilePath("customs_classic.png"), TilePath("customs_vanilla.png"), PresetSwap.OnMapVariantsAnswer, Warnings);
             if (ok) Log.LogInfo("[CC] registered Customs with MapVariants");
             else Log.LogError("[CC] MapVariants refused the registration; the shipped Customs loads and nothing is offered");
         }

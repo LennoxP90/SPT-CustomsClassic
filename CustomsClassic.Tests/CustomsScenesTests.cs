@@ -69,6 +69,8 @@ public class CustomsScenesTests
 
     [Theory]
     [InlineData("backport", MapVariant.Classic)]
+    [InlineData("classic", MapVariant.Classic)]
+    [InlineData(" CLASSIC ", MapVariant.Classic)]
     [InlineData("original", MapVariant.Original)]
     [InlineData("unmanaged", MapVariant.Original)]
     [InlineData(null, MapVariant.Original)]
